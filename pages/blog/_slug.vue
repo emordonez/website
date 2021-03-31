@@ -34,7 +34,7 @@ export default {
     const post = await $content('blog', params.slug).fetch()
     const [prev, next] = await $content('blog')
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('date', 'desc')
       .surround(params.slug)
       .fetch()
 
