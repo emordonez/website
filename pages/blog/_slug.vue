@@ -1,6 +1,5 @@
 <template>
   <div class="grid grid-cols-1 gap-16 lg:grid-cols-3">
-    <div v-if="!post.image && post.toc.length" class="block col-span-1" />
     <BlogTitle
       :title="post.title"
       :description="post.description"
@@ -10,7 +9,8 @@
       class="block col-span-1"
       :class="{
         'lg:col-span-3': post.image && post.toc.length,
-        'max-w-prose lg:col-span-2': !post.image || !post.toc.length
+        'max-w-prose lg:col-span-2': (post.image && !post.toc.length) || (!post.image && !post.toc.length),
+        'max-w-prose lg:col-span-2 lg:col-start-2': !post.image && post.toc.length
       }"
     />
     <aside v-if="post.toc.length" class="hidden lg:col-span-1 lg:flex lg:flex-col">
@@ -31,14 +31,21 @@ import Prism from '~/plugins/prism.js'
 export default {
   // Pass { deep: true } to search subdirectories
   async asyncData ({ $content, params }) {
-    const post = await $content('blog', params.slug).fetch()
-    const [prev, next] = await $content('blog')
-      .only(['title', 'slug'])
-      .sortBy('date', 'desc')
-      .surround(params.slug)
-      .fetch()
+    try {
+      const post = await $content('blog', params.slug).fetch()
+      const [prev, next] = await $content('blog')
+        .only(['title', 'slug'])
+        .sortBy('date', 'desc')
+        .surround(params.slug)
+        .fetch()
 
-    return { post, prev, next }
+      return { post, prev, next }
+    } catch (error) {
+      error({
+        statusCode: 404,
+        message: 'Page not found'
+      })
+    }
   },
   head () {
     return {

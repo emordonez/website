@@ -5,6 +5,7 @@
       <NuxtLink
         :to="{ name: 'index' }"
         class="py-1 border-b-2 border-transparent border-b-transparent transition-all duration-200 ease-in-out hover:border-blue-400"
+        @click.native="showMobileMenu = false"
       >
         <h4 class="uppercase tracking-wider">
           emordonez

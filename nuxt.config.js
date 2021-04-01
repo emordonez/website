@@ -18,10 +18,18 @@ export default {
   css: [],
   purgeCSS: {
     whitelistPatternsChildren: [/token$/],
+    whitelist: [
+      'pre', 'code', 'prism', 'line-numbers', 'tag', 'toolbar-item', 'toolbar',
+      'code-toolbar', 'span', 'button', 'line-numbers-rows', 'url-link', 'attr-name', 'attr-value', 'punctuation',
+      'keyword', 'keyword-let', 'operator', 'string',
+      'frac-line'
+    ],
     mode: 'postcss',
     enabled: (process.env.NODE_ENV === 'production')
   },
-  plugins: ['~/plugins/prism'],
+  plugins: [
+    '~/plugins/prism'
+  ],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -29,7 +37,9 @@ export default {
     '@nuxtjs/svg',
     'nuxt-purgecss'
   ],
-  modules: ['@nuxt/content'],
+  modules: [
+    '@nuxt/content'
+  ],
   content: {
     markdown: {
       remarkPlugins: ['remark-math'],
@@ -38,6 +48,9 @@ export default {
     }
   },
   build: {},
+  generate: {
+    fallback: true
+  },
   tailwindcss: {
     jit: true
   }

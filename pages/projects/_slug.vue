@@ -1,11 +1,10 @@
 <template>
   <div class="grid grid-cols-1 gap-16 lg:grid-cols-3">
-    <div class="block col-span-1" />
     <ProjectTitle
       :title="project.title"
       :description="project.description"
       :tags="project.tags"
-      class="block col-span-1 max-w-prose lg:col-span-2"
+      class="block col-span-1 max-w-prose lg:col-span-2 lg:col-start-2"
     />
     <aside v-if="project.toc.length" class="hidden lg:col-span-1 lg:flex lg:flex-col">
       <TableOfContents :toc="project.toc" class="md:sticky md:top-20" />
@@ -21,9 +20,16 @@ import Prism from '~/plugins/prism.js'
 
 export default {
   async asyncData ({ $content, params }) {
-    const project = await $content('projects', params.slug).fetch()
+    try {
+      const project = await $content('projects', params.slug).fetch()
 
-    return { project }
+      return { project }
+    } catch (error) {
+      error({
+        statusCode: 404,
+        message: 'Page not found'
+      })
+    }
   },
   head () {
     return {

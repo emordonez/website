@@ -5,7 +5,7 @@
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
       <section v-if="projects.length" id="projects" class="col-span-1">
         <NuxtLink :to="{ name: 'projects' }">
-          <h2 class="mb-6 text-2xl">
+          <h2 class="mb-6 text-2xl hover:underline">
             Current Projects
           </h2>
         </NuxtLink>
@@ -22,7 +22,7 @@
       </section>
       <section v-if="posts.length" id="posts" class="col-span-1 md:col-span-2">
         <NuxtLink :to="{ name: 'blog' }">
-          <h2 class="mb-6 text-2xl">
+          <h2 class="mb-6 text-2xl hover:underline">
             Latest Posts
           </h2>
         </NuxtLink>
