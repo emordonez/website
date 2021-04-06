@@ -20,7 +20,7 @@
           </NuxtLink>
         </div>
       </section>
-      <section v-if="posts.length" id="posts" class="col-span-1 md:col-span-2">
+      <section v-if="posts.length" id="posts" class="col-span-1 md:col-span-2 md:col-start-2">
         <NuxtLink :to="{ name: 'blog' }">
           <h2 class="mb-6 text-2xl hover:underline">
             Latest Posts

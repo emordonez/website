@@ -17,7 +17,7 @@
       <TableOfContents :toc="post.toc" class="md:sticky md:top-20" />
     </aside>
     <article class="block col-span-1 lg:col-span-2">
-      <NuxtContent :document="post" class="prose" />
+      <NuxtContent :document="post" class="prose prose-lg" />
       <HorizontalRule />
       <BlogPrevNextPosts :prev="prev" :next="next" />
     </article>
@@ -56,6 +56,9 @@ export default {
         { hid: 'og:description', property: 'og:description', content: this.post.description },
         { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.post.description }
+      ],
+      link: [
+        { rel: 'stylesheet', href: this.post.katex ? 'https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css' : '' }
       ]
     }
   },

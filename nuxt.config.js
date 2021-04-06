@@ -11,8 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: 'The personal site of Eric M. Ordoñez' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   css: [],

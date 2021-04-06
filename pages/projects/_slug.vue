@@ -10,7 +10,7 @@
       <TableOfContents :toc="project.toc" class="md:sticky md:top-20" />
     </aside>
     <article class="block col-span-1 lg:col-span-2">
-      <NuxtContent :document="project" class="prose" />
+      <NuxtContent :document="project" class="prose prose-lg" />
     </article>
   </div>
 </template>
@@ -40,6 +40,9 @@ export default {
         { hid: 'og:description', property: 'og:description', content: this.project.description },
         { hid: 'twitter:title', name: 'twitter:title', content: this.project.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.project.description }
+      ],
+      link: [
+        { rel: 'stylesheet', href: this.project.katex ? 'https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css' : '' }
       ]
     }
   },

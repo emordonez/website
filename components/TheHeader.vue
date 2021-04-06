@@ -1,5 +1,5 @@
 <template>
-  <header class="z-10 pt-6 pb-2 shadow-lg bg-gray-100">
+  <header class="z-10 pt-6 pb-2 shadow-md bg-gray-100">
     <nav class="flex justify-between items-center responsive-width">
       <!-- Home -->
       <NuxtLink
