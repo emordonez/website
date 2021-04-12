@@ -8,22 +8,14 @@
 </template>
 
 <script>
-// Can construct icons object with require context instead, but would need to
-//  to figure out ?inline query string
-const icons = {
-  chart: require('~/assets/icons/chart-bell-curve.svg?inline'),
-  close: require('~/assets/icons/close.svg?inline'),
-  email: require('~/assets/icons/email.svg?inline'),
-  github: require('~/assets/icons/github.svg?inline'),
-  information: require('~/assets/icons/information.svg?inline'),
-  laptop: require('~/assets/icons/laptop.svg?inline'),
-  linkedin: require('~/assets/icons/linkedin.svg?inline'),
-  menu: require('~/assets/icons/menu.svg?inline'),
-  post: require('~/assets/icons/post.svg?inline'),
-  python: require('~/assets/icons/language-python.svg?inline'),
-  r: require('~/assets/icons/language-r.svg?inline'),
-  vue: require('~/assets/icons/vuejs.svg?inline')
-}
+const icons = {}
+const requireComponents = require.context('~/assets/icons?inline', false, /\.svg$/)
+
+requireComponents.keys().forEach((fileName) => {
+  const iconName = fileName.replace(/^\.\/(.+)\.svg$/, '$1')
+  const componentConfig = requireComponents(fileName)
+  icons[iconName] = componentConfig.default || componentConfig
+})
 
 export default {
   props: {
