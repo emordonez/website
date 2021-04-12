@@ -12,7 +12,7 @@
         {{ item.subtitle }}
       </h6>
       <span v-if="item.info" class="meta-info text-xs">
-        {{ [item.info.date, item.info.location].filter(Boolean).join(' \u00B7 ') }}
+        {{ [item.info.location, item.info.date].filter(Boolean).join(' \u00B7 ') }}
       </span>
     </li>
   </ol>

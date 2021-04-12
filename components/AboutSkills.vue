@@ -9,15 +9,8 @@
         <Icon :name="item.icon" height="2em" width="2em" />
       </div>
       <div class="w-5/6">
-        <p>
-          {{ item.description }}
-        </p>
+        <p v-html="item.description" />
       </div>
-    </div>
-    <div>
-      <p>
-        Additionally, I have working familiarity with C++, Java, and Stata. I extensively use LaTeX for typsetting and presentations.
-      </p>
     </div>
   </div>
 </template>
@@ -30,22 +23,27 @@ export default {
         {
           id: 1,
           description: 'I excel when I can apply quantitative techniques to open-ended questions.',
-          icon: 'chart'
+          icon: 'chart-bell-curve'
         },
         {
           id: 2,
           description: 'I am proficient with Python and in particular the NumPy/SciPy and Pandas libraries.',
-          icon: 'python'
+          icon: 'language-python'
         },
         {
           id: 3,
           description: 'Lately, I am leaning toward R and ggplot2 for data visualization.',
-          icon: 'r'
+          icon: 'language-r'
         },
         {
           id: 4,
           description: 'For frontend development, I am learning Vue. I used to build static sites with Hugo.',
-          icon: 'vue'
+          icon: 'vuejs'
+        },
+        {
+          id: 5,
+          description: 'I can work comfortably with C++, Java, and Stata, and I use <span class="latex">L<span id="latex-a">a</span>T<span id="latex-e">e</span>X</span> extensively.',
+          icon: 'desktop-classic'
         }
       ]
     }
