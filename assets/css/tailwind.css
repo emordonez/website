@@ -32,7 +32,28 @@
     }
 }
 
+/*! purgecss start ignore */
 /* KaTeX fraction fix */
-.frac-line{
+.frac-line {
     border-color: black;
 }
+
+/* LaTeX logo */
+.latex {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.latex span {
+    position: relative;
+    top: 0.2rem;
+    font-size: 1rem;
+}
+#latex-a {
+    margin-left: -0.05rem;
+    margin-right: -0.15rem;
+}
+#latex-e {
+    margin-left: -0.1rem;
+    margin-right: -0.05rem;
+}
+/*! purgecss end ignore */

@@ -20,8 +20,7 @@ export default {
     whitelist: [
       'pre', 'code', 'prism', 'line-numbers', 'tag', 'toolbar-item', 'toolbar',
       'code-toolbar', 'span', 'button', 'line-numbers-rows', 'url-link', 'attr-name', 'attr-value', 'punctuation',
-      'keyword', 'keyword-let', 'operator', 'string',
-      'frac-line'
+      'keyword', 'keyword-let', 'operator', 'string'
     ],
     mode: 'postcss',
     enabled: (process.env.NODE_ENV === 'production')
