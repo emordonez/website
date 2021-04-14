@@ -15,6 +15,18 @@ module.exports = {
       inset: {
         '-1': '-0.25rem',
         '-2': '-0.5rem'
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            'code::before': {
+              content: '""'
+            },
+            'code::after': {
+              content: '""'
+            }
+          }
+        }
       }
     }
   },
