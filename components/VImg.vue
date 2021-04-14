@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center">
-    <NuxtImg :src="imgSrc" fit="contain" />
+    <NuxtImg v-if="!src.endsWith('.gif')" :src="imgSrc" fit="contain" />
+    <img v-else :src="require('~/static/' + imgSrc)">
     <div v-if="caption">
       <p class="text-gray-600 text-sm">
         {{ caption }}
