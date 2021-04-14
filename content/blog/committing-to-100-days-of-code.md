@@ -59,4 +59,5 @@ There will inevitably be roadblocks and burnout from focusing on one thing for t
 
 I've set (and failed to keep) New Year's resolutions in the past, but never before have I taken on a personal resolution with this kind of structure and accountability.
 I certainly see it as a challenge.
+
 If you're interested in trying this challenge yourself, [fork the official repo](https://github.com/kallaway/100-days-of-code) and get started!
