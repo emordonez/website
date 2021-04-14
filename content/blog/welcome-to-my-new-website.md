@@ -81,7 +81,7 @@ We can use Vue to inject whole components, like the table of contents you see in
 
 This is all made even easier by the enormous ecosystem of plugins and frameworks available for Vue, like Nuxt.
 
-<HorizontalRule></HorizontalRule>
+<horizontal-rule></horizontal-rule>
 
 This is a static site built with [Nuxt.js](https://nuxtjs.org/), a Vue framework that makes developing server-side rendered applications a breeze.
 It's essentially what Next.js is for React, and I found no difficulties in migrating from Hugo.
@@ -131,7 +131,7 @@ From my experience, other UI frameworks tend to either
 
 With Vue, I can take a more modular and minimalist approach in line with how I like to design.
 
-<HorizontalRule></HorizontalRule>
+<horizontal-rule></horizontal-rule>
 
 Syntax highlighting is done by [Prism.js](https://prismjs.com/), which is already bundled with Nuxt.
 
@@ -185,7 +185,7 @@ In the future, I'll write a full-length tutorial on how to make a basic Nuxt blo
 I learned the most just by doing, but I was guided by [Debbie O'Brien's](https://nuxtjs.org/blog/creating-blog-with-nuxt-content/) and [Gilbert Tanner's tutorials](https://gilberttanner.com/blog/creating-a-blog-with-nuxt-content) in particular.
 Hopefully, I can distill what I learned from them and from my experience into a guide that can help others in the same way.
 
-<HorizontalRule></HorizontalRule>
+<horizontal-rule></horizontal-rule>
 
 A simple personal site like this one is a great way to get started with Vue.
 I highly recommend it to anyone looking to learn their first JavaScript framework or for anyone in need of a quick and great-looking frontend!
