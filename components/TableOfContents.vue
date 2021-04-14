@@ -32,7 +32,7 @@ export default {
       observer: null,
       observerOptions: {
         root: this.$refs.nuxtContent,
-        threshold: 0.35
+        threshold: 0.5
       }
     }
   },

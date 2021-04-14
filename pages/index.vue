@@ -3,7 +3,7 @@
     <TheIntroduction class="pt-6" />
     <HorizontalRule />
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <section v-if="projects.length" id="projects" class="col-span-1">
+      <!-- <section v-if="projects.length" id="projects" class="col-span-1">
         <NuxtLink :to="{ name: 'projects' }">
           <h2 class="mb-6 text-2xl hover:underline">
             Current Projects
@@ -19,8 +19,8 @@
             />
           </NuxtLink>
         </div>
-      </section>
-      <section v-if="posts.length" id="posts" class="col-span-1 md:col-span-2 md:col-start-2">
+      </section> -->
+      <section v-if="posts.length" id="posts" class="col-span-1 md:col-span-3">
         <NuxtLink :to="{ name: 'blog' }">
           <h2 class="mb-6 text-2xl hover:underline">
             Latest Posts
@@ -52,9 +52,10 @@ export default {
       .limit(3)
       .fetch()
 
-    const projects = await $content('projects', params.slug).fetch()
+    return { posts }
+    // const projects = await $content('projects', params.slug).fetch()
 
-    return { posts, projects }
+    // return { posts, projects }
   },
   head: {
     title: null

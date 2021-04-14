@@ -33,6 +33,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
+    '@nuxt/image',
     'nuxt-purgecss'
   ],
   modules: [
