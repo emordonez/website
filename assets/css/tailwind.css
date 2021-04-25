@@ -11,7 +11,7 @@
     }
 
     .responsive-width {
-        @apply max-w-full w-11/12 px-1 mx-auto sm:px-6 sm:max-w-screen-md md:max-w-screen-lg;
+        @apply w-full max-w-full px-4 mx-auto sm:px-12 sm:max-w-screen-md md:max-w-screen-lg;
     }
     .bg-primary {
         @apply bg-blue-900 bg-opacity-90;

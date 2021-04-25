@@ -1,7 +1,3 @@
-export default (file) => {
-  try {
-    return require(`~/assets/images/${file}`)
-  } catch (error) {
-    return null
-  }
+export default (file, dir = 'blog') => {
+  return `${dir}/images/${file}`
 }

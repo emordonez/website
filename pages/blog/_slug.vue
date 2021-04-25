@@ -7,14 +7,12 @@
       :image="post.image"
       :tags="post.tags"
       class="block col-span-1"
-      :class="{
-        'lg:col-span-3': post.image && post.toc.length,
-        'max-w-prose lg:col-span-2': (post.image && !post.toc.length) || (!post.image && !post.toc.length),
-        'max-w-prose lg:col-span-2 lg:col-start-2': !post.image && post.toc.length
-      }"
+      :class="post.image ? 'lg:col-span-3' : 'max-w-prose lg:col-span-2 lg:col-start-2'
+      "
     />
-    <aside v-if="post.toc.length" class="hidden lg:col-span-1 lg:flex lg:flex-col">
-      <TableOfContents :toc="post.toc" class="md:sticky md:top-20" />
+    <aside class="flex flex-col col-span-1 order-last lg:order-none">
+      <BlogAuthorBio />
+      <TableOfContents v-if="post.toc.length" :toc="post.toc" class="hidden md:sticky md:top-20 lg:block" />
     </aside>
     <article class="block col-span-1 lg:col-span-2">
       <NuxtContent :document="post" class="prose prose-lg" />

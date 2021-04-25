@@ -7,7 +7,7 @@
       v-if="image"
       class="relative bg-center bg-cover aspect-h-2 aspect-w-3"
       :class="{ 'md:w-1/3 md:aspect-none': !featured }"
-      :style="{ backgroundImage: `url(${imgUrl(image)})` }"
+      :style="{ backgroundImage: `url(${backgroundImageUrl}` }"
     >
       &nbsp;
     </div>
@@ -67,6 +67,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    }
+  },
+  computed: {
+    backgroundImageUrl () {
+      return require(`~/static/${this.imgUrl(this.image)}`)
     }
   },
   methods: {

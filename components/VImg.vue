@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center">
-    <NuxtImg v-if="!src.endsWith('.gif')" :src="imgSrc" fit="contain" />
-    <img v-else :src="require('~/static/' + imgSrc)">
+    <NuxtImg v-if="!src.endsWith('.gif')" :src="imgUrl(src, dir)" fit="contain" />
+    <img v-else :src="require('~/static/' + imgUrl(src, dir))">
     <div v-if="caption">
       <p class="text-gray-600 text-sm">
         {{ caption }}
@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import imgUrl from '~/utils/imgUrl.js'
+
 export default {
   props: {
     src: {
@@ -28,10 +30,6 @@ export default {
       default: ''
     }
   },
-  computed: {
-    imgSrc () {
-      return `${this.dir}/images/${this.src}`
-    }
-  }
+  methods: { imgUrl }
 }
 </script>
