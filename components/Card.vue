@@ -1,24 +1,24 @@
 <template>
   <div
-    class="flex flex-col border shadow-md bg-white transition-all duration-100 hover:shadow-2xl"
+    class="flex flex-col h-full shadow-lg transition-all duration-100 hover:shadow-xl"
     :class="{ 'md:flex-row md:h-auto': !featured }"
   >
     <div
       v-if="image"
-      class="relative bg-center bg-cover aspect-h-2 aspect-w-3"
+      class="relative aspect-w-16 aspect-h-9 bg-center bg-cover"
       :class="{ 'md:w-1/3 md:aspect-none': !featured }"
       :style="{ backgroundImage: `url(${backgroundImageUrl}` }"
     >
       &nbsp;
     </div>
-    <div class="relative p-6" :class="{ 'md:w-2/3': !featured && image, 'w-full': !image }">
+    <div class="relative flex flex-col h-full p-6 bg-gray-50" :class="{ 'md:w-2/3': !featured && image, 'w-full': !image }">
       <h5 class="max-w-max mb-4 border-b-2 border-blue-400 text-lg">
         {{ title }}
       </h5>
-      <p class="mb-4 text-sm">
+      <p class="flex-grow mb-4 text-sm sm:text-base">
         {{ content }}
       </p>
-      <div class="meta-info text-xs">
+      <div class="meta-info text-xs sm:text-sm">
         <span v-if="date">
           {{ formatDate(date) }}
         </span>
@@ -63,6 +63,11 @@ export default {
       required: false,
       default: () => []
     },
+    dir: {
+      type: String,
+      required: false,
+      default: 'blog'
+    },
     featured: {
       type: Boolean,
       required: false,
@@ -71,7 +76,7 @@ export default {
   },
   computed: {
     backgroundImageUrl () {
-      return require(`~/static/${this.imgUrl(this.image)}`)
+      return require(`~/static/${this.imgUrl(this.image, this.dir)}`)
     }
   },
   methods: {

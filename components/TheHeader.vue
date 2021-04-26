@@ -70,11 +70,6 @@ export default {
           to: '/blog/',
           icon: 'post'
         },
-        // {
-        //   title: 'Projects',
-        //   to: '/projects/',
-        //   icon: 'laptop'
-        // },
         {
           title: 'About',
           to: '/about',

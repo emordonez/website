@@ -24,7 +24,7 @@
         <h2 class="mb-6 text-2xl">
           Experience
         </h2>
-        <AboutTimeline />
+        <AboutTimeline class="pl-3" />
       </div>
     </div>
   </main>

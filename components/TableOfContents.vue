@@ -5,8 +5,8 @@
         <div
           class="text-gray-800 text-sm"
           :class="{
-            'py-1 pl-2 border-l-4 border-transparent border-l-transparent': link.depth === 2,
-            'py-1 pl-6 border-l-4 border-transparent border-l-transparent': link.depth === 3,
+            'py-1 pl-2 border-l-4 border-l-transparent': link.depth === 2,
+            'py-1 pl-6 border-l-4 border-l-transparent': link.depth === 3,
             'border-gray-400 bg-gray-100 font-semibold' : link.id === currentlyActiveToc,
             'hover:border-blue-400 hover:bg-blue-100' : link.id !== currentlyActiveToc
           }"

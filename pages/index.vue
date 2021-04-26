@@ -2,44 +2,51 @@
   <main>
     <TheIntroduction class="pt-6" />
     <HorizontalRule />
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <!-- <section v-if="projects.length" id="projects" class="col-span-1">
-        <NuxtLink :to="{ name: 'projects' }">
-          <h2 class="mb-6 text-2xl hover:underline">
-            Current Projects
-          </h2>
+
+    <!-- Works in progress -->
+    <section v-if="works.length" id="works-in-progress" class="pb-8">
+      <h2 class="mb-6 text-2xl">
+        Works in Progress
+      </h2>
+      <p class="mb-6">
+        Repositories of some things I'm currently working on:
+      </p>
+      <div class="grid grid-cols-1 gap-4">
+        <a v-for="(item, index) in works" :key="index" :href="item.link">
+          <Card
+            :title="item.title"
+            :content="item.description"
+            :image="item.image"
+            :dir="'projects'"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- Latest blog posts -->
+    <section v-if="posts.length" id="posts" class="pb-8">
+      <NuxtLink :to="{ name: 'blog' }">
+        <h2 class="mb-6 text-2xl hover:underline">
+          Latest Posts
+        </h2>
+      </NuxtLink>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <NuxtLink
+          v-for="post of posts"
+          :key="post.slug"
+          :to="{ name: 'blog-slug', params: { slug: post.slug } }"
+        >
+          <Card
+            :title="post.title"
+            :content="post.description"
+            :image="post.image"
+            :date="post.date"
+            :tags="post.tags"
+            :featured="true"
+          />
         </NuxtLink>
-        <div v-for="project of projects" :key="project.slug" class="pb-6">
-          <NuxtLink :to="{ name: 'projects-slug', params: { slug: project.slug } }">
-            <Card
-              :title="project.title"
-              :content="project.description"
-              :tags="project.tags"
-              :featured="true"
-            />
-          </NuxtLink>
-        </div>
-      </section> -->
-      <section v-if="posts.length" id="posts" class="col-span-1 md:col-span-3">
-        <NuxtLink :to="{ name: 'blog' }">
-          <h2 class="mb-6 text-2xl hover:underline">
-            Latest Posts
-          </h2>
-        </NuxtLink>
-        <div v-for="post of posts" :key="post.slug" class="pb-6">
-          <NuxtLink :to="{ name: 'blog-slug', params: { slug: post.slug } }">
-            <Card
-              :title="post.title"
-              :content="post.description"
-              :image="post.image"
-              :date="post.date"
-              :tags="post.tags"
-              :featured="true"
-            />
-          </NuxtLink>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -49,13 +56,34 @@ export default {
     const posts = await $content('blog', params.slug)
       .only(['title', 'description', 'image', 'date', 'tags', 'slug'])
       .sortBy('date', 'desc')
-      .limit(3)
+      .limit(4)
       .fetch()
 
     return { posts }
-    // const projects = await $content('projects', params.slug).fetch()
-
-    // return { posts, projects }
+  },
+  data () {
+    return {
+      works: [
+        {
+          title: 'European soccer league transfers data set',
+          description: 'A web-scraped collection of over 134,000 player transfer records as found on Transfermarkt, spanning 28 seasons across 11 leagues.',
+          image: 'transfermarkt-logo.png',
+          link: 'https://github.com/emordonez/transfermarkt-transfers'
+        },
+        {
+          title: 'The Connecting Wall from "Only Connect"',
+          description: 'A web implementation of the Connecting Wall from the BBC quiz show "Only Connect," built with Vue.',
+          image: 'only-connect-connecting-wall.png',
+          link: 'https://github.com/emordonez/connecting-wall'
+        },
+        {
+          title: 'This Website',
+          description: 'My blog and website utilizing the Nuxt.js framework for Vue, in particular the content module with TailwindCSS.',
+          image: 'nuxtjs-logo.png',
+          link: 'https://github.com/emordonez/website'
+        }
+      ]
+    }
   },
   head: {
     title: null
