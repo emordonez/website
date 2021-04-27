@@ -9,7 +9,7 @@
         Works in Progress
       </h2>
       <p class="mb-6">
-        Repositories of some things I'm currently working on:
+        Repositories for some things I'm currently working on:
       </p>
       <div class="grid grid-cols-1 gap-4">
         <a v-for="(item, index) in works" :key="index" :href="item.link">
@@ -66,7 +66,7 @@ export default {
       works: [
         {
           title: 'European soccer league transfers data set',
-          description: 'A web-scraped collection of over 134,000 player transfer records as found on Transfermarkt, spanning 28 seasons across 11 leagues.',
+          description: 'A web-scraped collection of over 134,000 player transfer records as found on Transfermarkt, spanning 28 seasons across 10 leagues.',
           image: 'transfermarkt-logo.png',
           link: 'https://github.com/emordonez/transfermarkt-transfers'
         },
@@ -77,10 +77,16 @@ export default {
           link: 'https://github.com/emordonez/connecting-wall'
         },
         {
-          title: 'This Website',
+          title: 'This blog and website',
           description: 'My blog and website utilizing the Nuxt.js framework for Vue, in particular the content module with TailwindCSS.',
           image: 'nuxtjs-logo.png',
           link: 'https://github.com/emordonez/website'
+        },
+        {
+          title: 'Markdown-generated resumes and cover letters',
+          description: 'How I write resumes and cover letters by generating CSS-styled PDFs from Markdown.',
+          image: 'markdown-resume.png',
+          link: 'https://github.com/emordonez/markdown-resume'
         }
       ]
     }

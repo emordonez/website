@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col h-full shadow-lg transition-all duration-100 hover:shadow-xl"
+    class="flex flex-col h-full shadow-lg transition-all duration-100 hover:shadow-2xl"
     :class="{ 'md:flex-row md:h-auto': !featured }"
   >
     <div

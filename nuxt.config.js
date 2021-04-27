@@ -16,11 +16,12 @@ export default {
   },
   css: [],
   purgeCSS: {
-    whitelistPatternsChildren: [/token$/],
+    whitelistPatternsChildren: [/token$/, /prose$/],
     whitelist: [
       'pre', 'code', 'prism', 'line-numbers', 'tag', 'toolbar-item', 'toolbar',
       'code-toolbar', 'span', 'button', 'line-numbers-rows', 'url-link', 'attr-name', 'attr-value', 'punctuation',
-      'keyword', 'keyword-let', 'operator', 'string'
+      'keyword', 'keyword-let', 'operator', 'string',
+      'table-wrapper'
     ],
     mode: 'postcss',
     enabled: (process.env.NODE_ENV === 'production')
