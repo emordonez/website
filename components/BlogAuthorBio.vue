@@ -5,10 +5,10 @@
     </div>
     <div class="sm:max-w-full">
       <p class="mb-4 font-semibold">
-        Hi, my name is Eric.
+        Eric Ordoñez
       </p>
       <p class="mb-4 text-sm">
-        I'm a programmer and developer based in Chicago. I'm interested in math, economics, languages, and design.
+        Programmer and developer based in Chicago. Interested in econ, math, languages, and design.
       </p>
       <!-- <Socials class="justify-start" /> -->
     </div>

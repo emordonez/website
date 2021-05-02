@@ -3,6 +3,32 @@
     <TheIntroduction class="pt-6" />
     <HorizontalRule />
 
+    <!-- Latest blog posts -->
+    <section v-if="posts.length" id="posts" class="pb-8">
+      <h2 class="mb-6 text-2xl hover:underline">
+        <NuxtLink :to="{ name: 'blog' }">
+          Latest Posts
+        </NuxtLink>
+      </h2>
+      <div class="grid grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
+        <NuxtLink
+          v-for="post of posts"
+          :key="post.slug"
+          :to="{ name: 'blog-slug', params: { slug: post.slug } }"
+          :class="post.image ? 'md:row-span-2' : 'md:row-span-1'"
+        >
+          <Card
+            :title="post.title"
+            :content="post.description"
+            :image="post.image"
+            :date="post.date"
+            :tags="post.tags"
+            :featured="true"
+          />
+        </NuxtLink>
+      </div>
+    </section>
+
     <!-- Works in progress -->
     <section v-if="works.length" id="works-in-progress" class="pb-8">
       <h2 class="mb-6 text-2xl">
@@ -20,31 +46,6 @@
             :dir="'projects'"
           />
         </a>
-      </div>
-    </section>
-
-    <!-- Latest blog posts -->
-    <section v-if="posts.length" id="posts" class="pb-8">
-      <NuxtLink :to="{ name: 'blog' }">
-        <h2 class="mb-6 text-2xl hover:underline">
-          Latest Posts
-        </h2>
-      </NuxtLink>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <NuxtLink
-          v-for="post of posts"
-          :key="post.slug"
-          :to="{ name: 'blog-slug', params: { slug: post.slug } }"
-        >
-          <Card
-            :title="post.title"
-            :content="post.description"
-            :image="post.image"
-            :date="post.date"
-            :tags="post.tags"
-            :featured="true"
-          />
-        </NuxtLink>
       </div>
     </section>
   </main>

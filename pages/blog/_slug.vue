@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 gap-16 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-16 lg:grid-cols-4">
     <BlogTitle
       :title="post.title"
       :description="post.description"
@@ -7,14 +7,14 @@
       :image="post.image"
       :tags="post.tags"
       class="block col-span-1"
-      :class="post.image ? 'lg:col-span-3' : 'max-w-prose lg:col-span-2 lg:col-start-2'
+      :class="post.image ? 'lg:col-span-4' : 'max-w-prose lg:col-span-3 lg:col-start-2'
       "
     />
     <aside class="flex flex-col col-span-1 order-last lg:order-none">
       <BlogAuthorBio />
       <TableOfContents v-if="post.toc.length" :toc="post.toc" class="hidden md:sticky md:top-20 lg:block" />
     </aside>
-    <article class="block col-span-1 lg:col-span-2">
+    <article class="block col-span-1 lg:col-span-3">
       <NuxtContent :document="post" class="prose prose-lg" />
       <HorizontalRule />
       <BlogPrevNextPosts :prev="prev" :next="next" />
