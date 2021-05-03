@@ -29,6 +29,8 @@
       </div>
     </section>
 
+    <HorizontalRule />
+
     <!-- Works in progress -->
     <section v-if="works.length" id="works-in-progress" class="pb-8">
       <h2 class="mb-6 text-2xl">
@@ -67,7 +69,7 @@ export default {
       works: [
         {
           title: 'European soccer league transfers data set',
-          description: 'A web-scraped collection of over 134,000 player transfer records as found on Transfermarkt, spanning 28 seasons across 10 leagues.',
+          description: 'A web-scraped collection of over 134,000 player transfer records as found on Transfermarkt, spanning 29 seasons across 10 leagues.',
           image: 'transfermarkt-logo.png',
           link: 'https://github.com/emordonez/transfermarkt-transfers'
         },

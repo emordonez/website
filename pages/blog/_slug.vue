@@ -6,13 +6,11 @@
       :date="formatDate(post.date)"
       :image="post.image"
       :tags="post.tags"
-      class="block col-span-1"
-      :class="post.image ? 'lg:col-span-4' : 'max-w-prose lg:col-span-3 lg:col-start-2'
-      "
+      class="block col-span-1 lg:col-span-4"
     />
     <aside class="flex flex-col col-span-1 order-last lg:order-none">
       <BlogAuthorBio />
-      <TableOfContents v-if="post.toc.length" :toc="post.toc" class="hidden md:sticky md:top-20 lg:block" />
+      <TableOfContents v-if="post.toc.length" :toc="post.toc" class="hidden lg:sticky lg:top-20 lg:block" />
     </aside>
     <article class="block col-span-1 lg:col-span-3">
       <NuxtContent :document="post" class="prose prose-lg" />
