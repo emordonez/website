@@ -4,13 +4,15 @@ export default async function (to, from, savedPosition) {
   }
 
   const findEl = async (hash, x) => {
-    return document.querySelector(hash) ||
-      await new Promise((resolve, reject) => {
+    return (
+      document.querySelector(hash) ||
+      await new Promise((resolve) => {
         if (x > 50) {
           return resolve()
         }
         setTimeout(() => { resolve(findEl(hash, ++x || 1)) }, 100)
       })
+    )
   }
 
   if (to.hash) {
