@@ -8,7 +8,7 @@ This is my personal site and blog, built with Vue/Nuxt/TailwindCSS. You can see 
 
 - Breadcrumbs
 - Dark mode
-- Page transitions
+- ~~Page transitions~~
 - Categories and taxonomies
 - Sitemap and post search
 

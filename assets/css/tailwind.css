@@ -59,4 +59,14 @@
     margin-left: -0.1rem;
     margin-right: -0.05rem;
 }
+
+/* Page transitions */
+.page-enter-active, .page-leave-active {
+    transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    -webkit-transition: opacity 0.25s ease;
+}
+.page-enter, .page-leave-to {
+    opacity: 0
+}
 /*! purgecss end ignore */
