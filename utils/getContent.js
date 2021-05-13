@@ -1,7 +1,7 @@
 import global from '~/utils/global.js'
 
 export default async ($content, params, error) => {
-  const allPosts = await $content('blog').fetch()
+  const allPosts = await $content('blog', { deep: true }).fetch()
   const currentPage = parseInt(params.page)
   const perPage = global.pagination
 
@@ -12,7 +12,7 @@ export default async ($content, params, error) => {
     return (currentPage - 1) * perPage
   }
 
-  const paginatedPosts = await $content('blog')
+  const paginatedPosts = await $content('blog', { deep: true })
     .only(['title', 'description', 'image', 'date', 'tags', 'slug'])
     .sortBy('date', 'desc')
     .limit(perPage)

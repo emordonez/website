@@ -14,7 +14,7 @@
         <NuxtLink
           v-for="post of posts"
           :key="post.slug"
-          :to="{ name: 'blog-slug', params: { slug: post.slug } }"
+          :to="{ name: 'blog-slug', params: { year: post.date, slug: post.slug } }"
           :class="post.image ? 'md:row-span-2' : 'md:row-span-1'"
         >
           <Card
@@ -56,7 +56,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const posts = await $content('blog', params.slug)
+    const posts = await $content('blog', params.slug, { deep: true })
       .only(['title', 'description', 'image', 'date', 'tags', 'slug'])
       .sortBy('date', 'desc')
       .limit(4)
