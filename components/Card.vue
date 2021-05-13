@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col h-full border shadow transition-all duration-75 hover:shadow-xl"
+    class="flex flex-col h-full border shadow hover:shadow-xl"
     :class="{ 'md:flex-row md:h-auto': !featured }"
   >
     <div
@@ -11,7 +11,10 @@
     >
       &nbsp;
     </div>
-    <div class="relative flex flex-col h-full p-6 bg-gray-50" :class="{ 'md:w-2/3': !featured && image, 'w-full': !image }">
+    <div
+      class="relative flex flex-col h-full p-6 bg-gray-50"
+      :class="{ 'md:w-2/3': !featured && image, 'w-full': !image }"
+    >
       <h5 class="max-w-max mb-4 border-b-2 border-blue-400 text-lg">
         {{ title }}
       </h5>

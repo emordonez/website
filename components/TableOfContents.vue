@@ -7,10 +7,13 @@
           :class="[
             { 'pl-2': link.depth === 2 },
             { 'pl-6': link.depth === 3 },
-            link.id === activeToc ? 'border-gray-400 bg-gray-100' : 'hover:border-blue-400 hover:bg-blue-100'
+            link.id === activeToc ? 'active-toc' : 'inactive-toc'
           ]"
         >
-          <p class="text-gray-800 text-sm" :class="{ 'font-semibold' : link.id === activeToc}">
+          <p
+            class="text-gray-800 text-sm"
+            :class="{ 'font-semibold' : link.id === activeToc}"
+          >
             {{ link.text }}
           </p>
         </div>
@@ -91,3 +94,14 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+/*! purgecss start ignore */
+.active-toc {
+  @apply border-gray-400 bg-gray-100;
+}
+.inactive-toc {
+  @apply hover:border-blue-400 hover:bg-blue-100;
+}
+/*! purgecss end ignore */
+</style>

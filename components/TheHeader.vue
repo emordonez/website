@@ -4,7 +4,9 @@
       <!-- Home -->
       <NuxtLink
         :to="{ name: 'index' }"
-        class="py-1 border-b-2 border-transparent border-b-transparent transition-all duration-200 ease-in-out hover:border-blue-400"
+        class="py-1 border-b-2 border-transparent border-b-transparent
+          transition-all duration-200 ease-in-out
+          hover:border-blue-400"
         @click.native="showMobileMenu = false"
       >
         <h4 class="uppercase tracking-wider">
@@ -18,7 +20,10 @@
           v-for="(link, index) in links"
           :key="`link-${index}`"
           :to="link.to"
-          class="py-1 px-2 border-b-2 border-transparent border-b-transparent text-gray-800 transition-all duration-200 ease-in-out hover:border-blue-400"
+          class="py-1 px-2 border-b-2 border-transparent border-b-transparent
+            text-gray-800
+            transition-all duration-200 ease-in-out
+            hover:border-blue-400"
         >
           {{ link.title }}
         </NuxtLink>
@@ -42,7 +47,10 @@
       leave-class="opacity-100 scale-100"
       leave-to-class="opacity-0 scale-75"
     >
-      <div v-if="showMobileMenu" class="absolute z-20 grid grid-cols-1 gap-0 w-full p-4 mt-2 shadow bg-gray-50">
+      <div
+        v-if="showMobileMenu"
+        class="absolute z-20 grid grid-cols-1 gap-0 w-full p-4 mt-2 shadow bg-gray-50"
+      >
         <NuxtLink
           v-for="(link, index) in links"
           :key="`link-${index}`"
@@ -51,7 +59,12 @@
           @click.native="showMobileMenu = false"
         >
           <div class="py-2">
-            <Icon :name="link.icon" height="1.25em" width="1.25em" />&nbsp;&nbsp;{{ link.title }}
+            <Icon
+              :name="link.icon"
+              height="1.25em"
+              width="1.25em"
+            />
+            &nbsp;&nbsp;{{ link.title }}
           </div>
         </NuxtLink>
       </div>

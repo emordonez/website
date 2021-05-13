@@ -1,6 +1,10 @@
 <template>
   <header>
-    <div v-if="image" class="relative flex flex-col justify-between w-full sm:justify-end sm:py-6">
+    <!-- Title with banner image -->
+    <div
+      v-if="image"
+      class="relative flex flex-col justify-between w-full sm:justify-end sm:py-6"
+    >
       <div class="w-full py-4 sm:absolute sm:p-4 sm:bg-black sm:bg-opacity-70">
         <h1 class="mb-4 text-3xl sm:text-white sm:text-4xl">
           {{ title }}
@@ -22,7 +26,9 @@
       </div>
       <NuxtImg :src="imgUrl(image)" />
     </div>
-    <div v-else class="py-4">
+
+    <!-- Title without a banner image -->
+    <div v-else class="w-11/12 py-4 lg:w-full">
       <h1 class="mb-4 text-3xl sm:text-4xl">
         {{ title }}
       </h1>

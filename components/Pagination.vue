@@ -6,18 +6,21 @@
         &laquo;
       </button>
     </NuxtLink>
+
     <!-- Prev -->
     <NuxtLink :to="{ name: 'blog-page-page', params: { page: prevPage } }">
       <button class="button-label" :disabled="currentPage === 1">
         &lsaquo;
       </button>
     </NuxtLink>
+
     <!-- Next -->
     <NuxtLink :to="{ name: 'blog-page-page', params: { page: nextPage } }">
       <button class="button-label" :disabled="currentPage === totalPages">
         &rsaquo;
       </button>
     </NuxtLink>
+
     <!-- Last -->
     <NuxtLink :to="{ name: 'blog-page-page', params: { page: totalPages } }">
       <button class="button-label" :disabled="currentPage === totalPages">
