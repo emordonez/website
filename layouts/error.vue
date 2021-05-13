@@ -13,7 +13,7 @@
       <h1 class="mb-4 text-3xl text-center">
         An error occurred...
       </h1>
-      <img src="~/assets/images/error-else.png" alt="error" class="block p-6 mx-auto">
+      <img src="~/assets/images/error.png" alt="error" class="block p-6 mx-auto">
     </div>
     <NuxtLink to="/" class="text-gray-800 font-semibold text-center">
       &larr; Go back
