@@ -4,6 +4,7 @@ description: "In an effort to reinforce daily habits, I am committing myself to 
 date: 2021-04-11
 image: ''
 tags: ['100 Days of Code']
+katex: false
 ---
 
 I never get caught up in social media trends and challenges, but I finally found one right up my alley: [#100DaysOfCode](https://www.100daysofcode.com/).
@@ -31,7 +32,7 @@ But falling short of the goal is not unheard of in any first attempt.
 Why have I rarely persisted upon failure in conscious habit formation?
 Looking back on my past attempts (and failures) to exercise more, read more, and eat healthier, I realize that I never articulated to myself the how, why, or what.
 
-<v-img src='qoobee-trying-upon-failure.jpg' caption="Failure should just be a part of the process, not the final result."></v-img>
+<v-img src="2021/04/qoobee-trying-upon-failure.jpg" caption="Failure should just be a part of the process, not the final result."></v-img>
 
 I see a daily coding challenge as a great way to develop this meta habit that underpins any good habit:
 

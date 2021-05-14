@@ -22,7 +22,7 @@ I'd like to keep track of what I'm learning and what I'm working on, so most pos
 - **Language learning.** I have an amateur interest in linguistics and enjoy the challenges of learning new languages.
 - **Southeast Asia.** My passion outside the classroom has always been for Philippine culture and history, but ever since living in Indonesia and visiting Singapore I have a wider eye for the whole region.
 
-<v-img src='san-isidro.jpg' caption="Hiking in San Isidro, Rizal, 2017. One thing I'd like to finally write about are my thoughts from living in the Philippines and Indonesia."></v-img>
+<v-img src="2021/04/san-isidro.jpg" caption="Hiking in San Isidro, Rizal, 2017. One thing I'd like to finally write about are my thoughts from living in the Philippines and Indonesia."></v-img>
 
 Other things I would like to collect and publish here are my lecture notes, code, past presentations, and more.
 All of this and more can be easily done with Vue.
@@ -74,7 +74,7 @@ For example, we can use
 - _directives_, like the `v-if` conditional or `@click` event handler, to make HTML react to data changes and user input; and
 - _data binding_, like `{{ greeting }}`, to inject and modify HTML and serve these changes instantly.
 
-<v-img src='vue-example.gif' caption="Clicking on the header text fires toggleText, which flips the value of showText to create or destroy the message text."></v-img>
+<v-img src="2021/04/vue-example.gif" caption="Clicking on the header text fires toggleText, which flips the value of showText to create or destroy the message text."></v-img>
 
 Of course there are plenty of other directives, handlers, and manipulations that Vue provides, but this illustrates its power.
 We can use Vue to inject whole components, like the table of contents you see in the margin, and template and route entire sites, like this one.
@@ -109,7 +109,7 @@ Take for example this simple card:
 <template>
 ```
 
-<v-img src='card-example.png'></v-img>
+<v-img src="2021/04/card-example.png"></v-img>
 
 Each token in the class attribute is a separate CSS declaration:
 

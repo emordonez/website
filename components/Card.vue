@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex flex-col h-full border shadow hover:shadow-xl"
-    :class="{ 'md:flex-row md:h-auto': !featured }"
+    :class="{ 'md:flex-row-reverse md:h-auto': !featured }"
   >
     <div
       v-if="image"

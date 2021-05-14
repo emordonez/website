@@ -25,12 +25,12 @@ Interestingly, Chelsea's league-leading expenditure brought in just five players
 - Hakim Ziyech for £34.8m
 - Éduoard Mendy for £20.9m
 
-<v-img src="transfers-1-1.png"></v-img>
+<v-img src="2021/04/transfers-1-1.png"></v-img>
 
 But the Premier League is still clearly a buying league.
 No club sold players for more money than they spent to buy them.
 
-<v-img src="transfers-1-2.png"></v-img>
+<v-img src="2021/04/transfers-1-2.png"></v-img>
 
 ## The past decade of Premier League spending
 
@@ -40,12 +40,12 @@ Together with Manchester United, Liverpool, Arsenal, and Tottenham, these Big Si
 However, total expenditures are increasing across the league, and the gap between the Big Six and the rest is shrinking.
 More money is flowing into the league through lucrative broadcasting deals and ambitious owners like those of Leicester City, Aston Villa, and Wolverhampton Wanderers.
 
-<v-img src="transfers-2-1.png"></v-img>
+<v-img src="2021/04/transfers-2-1.png"></v-img>
 
 The three biggest spenders are indeed the three most successful clubs.
 A reasonable assumption among fans and pundits is that clubs can't win without quality players, which will invariably cost lots of money.
 
-<v-img src="transfers-2-2.png"></v-img>
+<v-img src="2021/04/transfers-2-2.png"></v-img>
 
 But the numbers don't always align with each club's success.
 Manchester United's spending spiked after Sir Alex Ferguson retired in 2013, and they haven't won the league since then.
@@ -59,7 +59,7 @@ Kepa at Chelsea (£69.6m, 2018) and Nicolas Pépé at Arsenal (£69.6m, 2019) ar
 English clubs collectively spend a massive amount, but the biggest player purchases are made by continental clubs.
 A French club and Spanish clubs top the list of most expensive European transfers.
 
-<v-img src="transfers-3-1.png"></v-img>
+<v-img src="2021/04/transfers-3-1.png"></v-img>
 
 We can see a couple things straight away.
 
@@ -71,7 +71,7 @@ They could demand exorbitant fees that Barcelona would've been unable or unwilli
 This sets up the second observation: 19 of these 25 transfers happened in the past five years.
 The Neymar transfer suggests the market now suffers from [demand-pull inflation](https://en.wikipedia.org/wiki/Demand-pull_inflation), but how does adjusting for natural inflation change the picture?
 
-<v-img src="transfers-3-2.png"></v-img>
+<v-img src="2021/04/transfers-3-2.png"></v-img>
 
 Adjusting for inflation shuffles the list with two notable movements: Havertz drops out, Figo comes in; and Zidane's then world-record transfer shoots up from the 24th to 12th most expensive transfer.
 
@@ -86,12 +86,12 @@ This is true in the Premier League at least.
 
 The median Premier League transfer fee is trending upward but not as fast as the mean fee, with the latter being driven by greater max fees and more frequent purchases in the upper extreme.
 
-<v-img src="transfers-4-1.png"></v-img>
+<v-img src="2021/04/transfers-4-1.png"></v-img>
 
 The inflating median and mean fees reflect the massive amounts of money coming into the league.
 This is a simple case of price levels increasing as income increases.
 
-<v-img src="transfers-4-2.png"></v-img>
+<v-img src="2021/04/transfers-4-2.png"></v-img>
 
 So this inflation is not necessarily to the league's detriment.
 If anything, it indicates its success.
@@ -110,7 +110,7 @@ The money supply increased faster than the real growth of players' market values
 The English predicament of the Big Six outspending everyone and winning everything is not a unique situation in Europe.
 The top five leagues are oligopolies, where a handful of clubs dominate the transfer market and the competition.
 
-<v-img src="transfers-5-1.png"></v-img>
+<v-img src="2021/04/transfers-5-1.png"></v-img>
 
 This is also seen in how many league titles these clubs have won out of the 29 contested from 1992/93&ndash;2020/21:
 

@@ -10,6 +10,13 @@
       class="block col-span-1 lg:col-span-4"
     />
 
+    <!-- Post content -->
+    <article class="block col-span-1 lg:col-span-3">
+      <NuxtContent :document="post" class="prose prose-lg" />
+      <HorizontalRule />
+      <BlogPrevNextPosts :prev="prev" :next="next" />
+    </article>
+
     <!-- Author bio and table of contents -->
     <aside class="flex flex-col col-span-1 order-last lg:order-none">
       <BlogAuthorBio />
@@ -19,13 +26,6 @@
         class="hidden lg:sticky lg:top-20 lg:block"
       />
     </aside>
-
-    <!-- Post content -->
-    <article class="block col-span-1 lg:col-span-3">
-      <NuxtContent :document="post" class="prose prose-lg" />
-      <HorizontalRule />
-      <BlogPrevNextPosts :prev="prev" :next="next" />
-    </article>
   </div>
 </template>
 

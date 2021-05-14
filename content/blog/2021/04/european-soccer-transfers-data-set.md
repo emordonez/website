@@ -1,8 +1,9 @@
 ---
 title: 'European soccer transfers data set'
+permalink: 'european-soccer-transfers-data-set'
 description: "I web scraped over 134,000 European soccer transfers from Transfermarkt, spanning 28 seasons and 10 leagues. Here is a first look at what I did and what I think the data's potential is."
 date: 2021-04-16
-image: 'ronaldo-header-sampdoria.jpg'
+image: '2021/04/ronaldo-header-sampdoria.jpg'
 tags: ['soccer']
 katex: false
 ---
