@@ -24,7 +24,7 @@
           </span>
         </div>
       </div>
-      <NuxtImg :src="imgUrl(image)" />
+      <img :src="imgUrl(image)" alt="">
     </div>
 
     <!-- Title without a banner image -->

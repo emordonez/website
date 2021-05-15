@@ -1,3 +1,3 @@
 export default (file, dir = 'blog') => {
-  return `${dir}/images/${file}`
+  return require(`~/static/${dir}/images/${file}`)
 }

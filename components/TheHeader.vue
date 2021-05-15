@@ -10,7 +10,7 @@
         @click.native="showMobileMenu = false"
       >
         <h4 class="uppercase tracking-wider">
-          emordonez
+          Eric M. Ordoñez
         </h4>
       </NuxtLink>
 

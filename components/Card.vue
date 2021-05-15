@@ -7,7 +7,7 @@
       v-if="image"
       class="relative aspect-w-16 aspect-h-9 bg-center bg-cover"
       :class="{ 'md:w-1/3 md:aspect-none': !featured }"
-      :style="{ backgroundImage: `url(${backgroundImageUrl}` }"
+      :style="{ backgroundImage: `url(${imgUrl(image, dir)}` }"
     >
       &nbsp;
     </div>
@@ -77,11 +77,11 @@ export default {
       default: false
     }
   },
-  computed: {
-    backgroundImageUrl () {
-      return require(`~/static/${this.imgUrl(this.image, this.dir)}`)
-    }
-  },
+  // computed: {
+  //   backgroundImageUrl () {
+  //     return require(`${this.imgUrl(this.image, this.dir)}`)
+  //   }
+  // },
   methods: {
     formatDate,
     imgUrl
