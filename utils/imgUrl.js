@@ -1,3 +1,4 @@
 export default (file, dir = 'blog') => {
-  return require(`~/static/${dir}/images/${file}`)
+  // Should follow directory structure on Cloudinary
+  return `website/${dir}/${file}`
 }

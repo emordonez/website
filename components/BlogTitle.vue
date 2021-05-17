@@ -24,7 +24,11 @@
           </span>
         </div>
       </div>
-      <img :src="imgUrl(image)" alt="">
+      <CldImage
+        :public-id="imgUrl(image)"
+        width="950"
+        quality="auto"
+      />
     </div>
 
     <!-- Title without a banner image -->
