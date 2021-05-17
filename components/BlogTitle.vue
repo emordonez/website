@@ -24,7 +24,11 @@
           </span>
         </div>
       </div>
-      <NuxtImg :src="imgUrl(image)" />
+      <CldImage
+        :public-id="imgUrl(image)"
+        width="950"
+        quality="auto"
+      />
     </div>
 
     <!-- Title without a banner image -->

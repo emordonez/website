@@ -10,7 +10,7 @@
         @click.native="showMobileMenu = false"
       >
         <h4 class="uppercase tracking-wider">
-          emordonez
+          {{ name }}
         </h4>
       </NuxtLink>
 
@@ -73,9 +73,12 @@
 </template>
 
 <script>
+import global from '~/utils/global.js'
+
 export default {
   data () {
     return {
+      name: global.name,
       showMobileMenu: false,
       links: [
         {

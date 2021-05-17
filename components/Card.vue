@@ -7,7 +7,7 @@
       v-if="image"
       class="relative aspect-w-16 aspect-h-9 bg-center bg-cover"
       :class="{ 'md:w-1/3 md:aspect-none': !featured }"
-      :style="{ backgroundImage: `url(${backgroundImageUrl}` }"
+      :style="{ backgroundImage: `url(${backgroundImageUrl})` }"
     >
       &nbsp;
     </div>
@@ -79,7 +79,7 @@ export default {
   },
   computed: {
     backgroundImageUrl () {
-      return require(`~/static/${this.imgUrl(this.image, this.dir)}`)
+      return this.$cloudinary.image.url(imgUrl(this.image, this.dir))
     }
   },
   methods: {

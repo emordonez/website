@@ -34,11 +34,11 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
-    '@nuxt/image',
     'nuxt-purgecss'
   ],
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/cloudinary'
   ],
   content: {
     markdown: {
@@ -46,6 +46,10 @@ export default {
       rehypePlugins: ['rehype-katex'],
       prism: { theme: false }
     }
+  },
+  cloudinary: {
+    cloudName: 'emtordo',
+    useComponent: true
   },
   build: {},
   generate: {

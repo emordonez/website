@@ -1,7 +1,11 @@
 <template>
   <div class="flex flex-col items-center justify-center">
-    <NuxtImg v-if="!src.endsWith('.gif')" :src="imgUrl(src, dir)" fit="contain" />
-    <img v-else :src="require('~/static/' + imgUrl(src, dir))">
+    <CldImage
+      :public-id="imgUrl(src, dir)"
+      loading="lazy"
+      quality="auto"
+      alt="alt"
+    />
     <div v-if="caption">
       <p class="text-gray-600 text-sm">
         {{ caption }}
@@ -23,6 +27,11 @@ export default {
       type: String,
       required: false,
       default: 'blog'
+    },
+    alt: {
+      type: String,
+      required: false,
+      default: ''
     },
     caption: {
       type: String,

@@ -9,7 +9,7 @@
     </div>
     <div class="sm:max-w-full">
       <p class="mb-4 font-semibold">
-        Eric Ordoñez
+        {{ name }}
       </p>
       <p class="mb-4 text-sm">
         Programmer and developer based in Chicago.
@@ -19,3 +19,15 @@
     </div>
   </div>
 </template>
+
+<script>
+import global from '~/utils/global.js'
+
+export default {
+  data () {
+    return {
+      name: global.name
+    }
+  }
+}
+</script>
