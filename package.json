@@ -14,24 +14,21 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/cloudinary": "^1.0.3-beta-4",
     "@nuxtjs/svg": "^0.1.12",
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/typography": "^0.4.0",
     "cloudinary-vue": "1.1.2",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
-    "nuxt-purgecss": "^1.0.0",
     "rehype-katex": "^4.0.0",
     "remark-math": "^4.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/tailwindcss": "^4.0.1",
+    "@windicss/plugin-heropatterns": "^0.0.8",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.7.0",
-    "postcss": "^8.2.8",
+    "nuxt-windicss": "^0.7.4",
     "tailwindcss-debug-screens": "^2.0.0"
   }
 }

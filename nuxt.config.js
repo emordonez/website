@@ -14,27 +14,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: [],
-  purgeCSS: {
-    whitelistPatternsChildren: [/token$/, /prose$/],
-    whitelist: [
-      'pre', 'code', 'prism', 'line-numbers', 'tag', 'toolbar-item', 'toolbar',
-      'code-toolbar', 'span', 'button', 'line-numbers-rows', 'url-link', 'attr-name', 'attr-value', 'punctuation',
-      'keyword', 'keyword-let', 'operator', 'string',
-      'table-wrapper'
-    ],
-    mode: 'postcss',
-    enabled: (process.env.NODE_ENV === 'production')
-  },
-  plugins: [
-    '~/plugins/prism'
-  ],
+  css: ['~/assets/css/main.css'],
+  plugins: ['~/plugins/prism'],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
-    'nuxt-purgecss'
+    'nuxt-windicss'
   ],
   modules: [
     '@nuxt/content',
@@ -54,8 +40,5 @@ export default {
   build: {},
   generate: {
     fallback: true
-  },
-  tailwindcss: {
-    jit: true
   }
 }
