@@ -7,7 +7,7 @@
           sm:flex sm:justify-between sm:space-y-0 sm:text-base sm:text-left"
       >
         <a :href="repo" class="overflow-ellipsis hover:underline">
-          &copy; EMO {{ new Date().getFullYear() }} &middot; Built with Vue/Nuxt/Tailwind.
+          &copy; EMO {{ new Date().getFullYear() }} &middot; Built with Vue/Nuxt/Windi.
         </a>
         <Socials class="justify-center sm:justify-end" />
       </div>

@@ -1,7 +1,3 @@
-const aspectRatio = require('windicss/plugin/aspect-ratio')
-const typography = require('windicss/plugin/typography')
-const debugScreens = require('tailwindcss-debug-screens')
-
 module.exports = {
   darkMode: 'class',
   theme: {
@@ -38,8 +34,19 @@ module.exports = {
   },
   safelist: ['prose', 'prose-lg'],
   plugins: [
-    aspectRatio,
-    typography,
-    debugScreens
+    require('windicss/plugin/aspect-ratio'),
+    require('windicss/plugin/typography')({
+      modifiers: ['DEFAULT', 'lg']
+    }),
+    require('@windicss/plugin-heropatterns')({
+      patterns: ['topography'],
+      colors: {
+        default: '#F3F4F6'
+      },
+      opacity: {
+        default: '1.0'
+      }
+    }),
+    require('tailwindcss-debug-screens')
   ]
 }
