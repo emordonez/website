@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
+@layer base{
     h1, h2, h3, h4, h5, h6 {
         @apply font-semibold text-gray-800;
     }
@@ -32,10 +28,9 @@
     }
     .table-wrapper {
         @apply overflow-x-auto;
-    }    
+    }
 }
 
-/*! purgecss start ignore */
 /* KaTeX fraction fix */
 .frac-line {
     border-color: black;
@@ -69,4 +64,3 @@
 .page-enter, .page-leave-to {
     opacity: 0
 }
-/*! purgecss end ignore */
